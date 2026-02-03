@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
 
 <com.google.android.material.appbar.MaterialToolbar
     android:background="?attr/colorPrimary"
     android:elevation="4dp"
     app:title="Les meves tasques"
-    app:titleTextColor="@android:color/white" />
+    app:titleTextColor="@android:color/white"
+    android:layout_height="50dp"
+    android:layout_width="match_parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:id="@+id/appbar"
+    />
 
 <com.google.android.material.chip.ChipGroup
-app:checkedChip="@id/chipTotes"
-app:singleSelection="true">
-
+    android:id="@+id/chipGroup"
+    app:checkedChip="@id/chipTotes"
+    app:singleSelection="true"
+    android:layout_height="50dp"
+    android:layout_width="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/appbar"
+    app:layout_constraintStart_toStartOf="parent"
+    >
 <com.google.android.material.chip.Chip
     android:id="@+id/chipTotes"
     style="@style/Widget.Material3.Chip.Filter"
@@ -42,5 +58,12 @@ app:singleSelection="true">
 
 
 <androidx.recyclerview.widget.RecyclerView
-android:clipToPadding="false"
-android:padding="8dp" />
+    android:id="@+id/recyclerview"
+    android:clipToPadding="false"
+    android:padding="8dp"
+    android:layout_height="0dp"
+    android:layout_width="match_parent"
+    app:layout_constraintTop_toBottomOf="@id/chipGroup"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,9 @@
 package com.example.examen
 
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+
 // Adapter per RecyclerView
 class TasquesAdapter : RecyclerView.Adapter<TascaViewHolder>() {
 
@@ -19,5 +23,7 @@ class TasquesAdapter : RecyclerView.Adapter<TascaViewHolder>() {
     override fun onBindViewHolder(holder: TascaViewHolder, position: Int) {
         holder.renderitza(tasques[position])
     }
+
+    override fun getItemCount(): Int = tasques.size
 
 }

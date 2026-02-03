@@ -1,7 +1,6 @@
 package com.example.examen
 // Fragment Tasques
 
-import TasquesAdapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.appcompat.widget.Toolbar
@@ -33,7 +32,7 @@ class TasquesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         toolbar = view.findViewById(R.id.toolbar)
-        recyclerView = view.findViewById(R.id.recyclerView)
+        recyclerView = view.findViewById(R.id.recyclerview)
         chipGroup = view.findViewById(R.id.chipGroup)
 
         setupRecyclerView()
